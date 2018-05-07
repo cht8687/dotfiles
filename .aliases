@@ -149,3 +149,34 @@ alias reload="exec ${SHELL} -l"
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
+
+git config --global user.email "cht8687@gmail.com"
+git config --global user.name "Robert Chang"
+
+
+# alias commands
+alias cdw='cd ~/Documents/work';
+alias cdp='cd ~/Documents/cht'
+alias cnginx='code /usr/local/etc/nginx/nginx.conf'
+alias cdn='cd /usr/local/etc/nginx; code nginx.conf;'
+alias rnginx='sudo nginx -s stop;sudo nginx;'
+alias gitcht8687='git config user.name "cht8687"; git config user.email "cht8687@gmail.com";'
+alias gs='gulp serve-dev'
+alias dud='bash update_from_git.sh'
+alias dc='docker-compose'
+alias dcps='docker-compose ps'
+
+
+# Git
+git config --global color.ui true
+git config --global format.pretty oneline
+git config --global core.autocrl input
+git config --global core.fileMode true
+
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+
+alias dsf='git diff --color | diff-so-fancy'
+

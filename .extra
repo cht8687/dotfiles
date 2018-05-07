@@ -1,5 +1,5 @@
-  git config --global user.email "cht8687@gmail.com"
-  git config --global user.name "Robert Chang"
+git config --global user.email "cht8687@gmail.com"
+git config --global user.name "Robert Chang"
 
 
 # alias commands
