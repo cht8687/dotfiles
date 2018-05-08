@@ -92,3 +92,10 @@ source /home/cht/.aliases
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/serverless.zsh ]] && . /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/sls.zsh
