@@ -99,3 +99,4 @@ source /home/cht/.aliases
 # tabtab source for sls package
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/sls.zsh
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

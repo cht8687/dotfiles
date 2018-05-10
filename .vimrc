@@ -2,7 +2,6 @@
 colorscheme onedark
 let g:solarized_termtrans=1
 
-
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
@@ -11,11 +10,15 @@ call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'mileszs/ack.vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'isRuslan/vim-es6'
+Plugin 'junegunn/fzf.vim'
+
 
 call vundle#end()            " required
 
@@ -100,6 +103,7 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
+
 " Use relative line numbers
 if exists("&relativenumber")
 	set relativenumber
