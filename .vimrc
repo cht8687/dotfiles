@@ -1,5 +1,8 @@
 " Use the Solarized Dark theme
-colorscheme onedark
+"colorscheme onedark
+colorscheme OceanicNext
+let g:oceanic_next_terminal_bold = 1
+let g:oceanic_next_terminal_italic = 1
 let g:solarized_termtrans=1
 
 " set the runtime path to include Vundle and initialize
@@ -18,6 +21,9 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
 Plugin 'isRuslan/vim-es6'
 Plugin 'junegunn/fzf.vim'
+Plugin 'mhartington/oceanic-next'
+Plugin 'othree/yajs.vim'
+Plugin 'othree/html5.vim'
 
 
 call vundle#end()            " required
@@ -66,6 +72,7 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
+set t_Co=256
 " Highlight current line
 set cursorline
 filetype plugin indent on
