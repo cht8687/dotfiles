@@ -24,7 +24,7 @@ Plugin 'junegunn/fzf.vim'
 Plugin 'mhartington/oceanic-next'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/html5.vim'
-
+Plugin 'styled-components/vim-styled-components'
 
 call vundle#end()            " required
 
