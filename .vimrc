@@ -31,6 +31,8 @@ call vundle#end()            " required
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 autocmd vimenter * NERDTree
+" NERDTree show hidden files
+let NERDTreeShowHidden=1
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
