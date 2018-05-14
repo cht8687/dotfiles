@@ -112,7 +112,8 @@ set showmode
 set title
 " Show the (partial) command as it’s being typed
 set showcmd
-
+" Show JSX
+let g:jsx_ext_required = 1
 " Use relative line numbers
 if exists("&relativenumber")
 	set relativenumber
