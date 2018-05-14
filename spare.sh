@@ -4,3 +4,5 @@ cp ~/.vimrc .
 cp ~/.bash_profile .
 cp ~/.aliases .
 cp ~/.zshrc .
+sudo cp -r ~/.vim .
+
