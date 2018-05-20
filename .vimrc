@@ -1,11 +1,11 @@
 " Use the Solarized Dark theme
-"colorscheme onedark
-colorscheme OceanicNext
+"colorscheme 
+
+set t_Co=256
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
-let g:solarized_termtrans=1
+colorscheme OceanicNext
 
-" set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
 
