@@ -25,6 +25,12 @@ Plugin 'mhartington/oceanic-next'
 Plugin 'othree/yajs.vim'
 Plugin 'othree/html5.vim'
 Plugin 'styled-components/vim-styled-components'
+Plugin 'sheerun/vim-polyglot'
+Plugin 'rakr/vim-one'
+Plugin 'junegunn/seoul256.vim'
+Plugin 'Shougo/deoplete.nvim'
+Plugin 'roxma/nvim-yarp'
+Plugin 'roxma/vim-hug-neovim-rpc'
 
 call vundle#end()            " required
 
@@ -124,8 +130,13 @@ set scrolloff=3
 " vim-javascript settings
 let g:javascript_plugin_jsdoc = 1
 
-
 " Strip trailing whitespace (,ss)
+let g:polyglot_disabled = ['graphql']
+
+"deoplete auto-complete
+let g:deoplete#enable_at_startup = 1
+
+"lyglot_disabled = ['css']
 function! StripWhitespace()
 	let save_cursor = getpos(".")
 	let old_query = getreg('/')
