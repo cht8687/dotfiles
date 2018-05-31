@@ -43,6 +43,10 @@ let NERDTreeShowHidden=1
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
+
+set cursorcolumn 
+set cursorline
+
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
