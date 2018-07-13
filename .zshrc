@@ -100,3 +100,7 @@ source /home/cht/.aliases
 # uninstall by removing these lines or running `tabtab uninstall sls`
 [[ -f /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/sls.zsh ]] && . /home/cht/Documents/cht/hireslist/packages/scraper/node_modules/tabtab/.completions/sls.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
