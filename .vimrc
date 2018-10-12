@@ -36,7 +36,7 @@ call vundle#end()            " required
 
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " NERDTree show hidden files
 let NERDTreeShowHidden=1
 " Make Vim more useful
@@ -151,6 +151,8 @@ endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
+
+map ; :GFiles<CR>
 
 " Automatic commands
 if has("autocmd")
