@@ -159,7 +159,18 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 map ; :GFiles<CR>
 
 " Map NerdTree
-map <C-o> :NERDTreeToggle<CR>
+nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gd :Gdiff<CR>
+noremap <Leader>g :GFiles<CR>
+
+noremap <S-l> gt
+noremap <S-h> gT
+
+" easy macros
+nnoremap Q @q
+vnoremap Q :norm @q<cr>
 
 " Automatic commands
 if has("autocmd")
