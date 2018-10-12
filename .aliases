@@ -180,3 +180,6 @@ git config --global alias.st status
 
 alias dsf='git diff --color | diff-so-fancy'
 
+# vim
+alias v='nvim'
+

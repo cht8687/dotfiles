@@ -28,9 +28,12 @@ Plugin 'styled-components/vim-styled-components'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'rakr/vim-one'
 Plugin 'junegunn/seoul256.vim'
-Plugin 'Shougo/deoplete.nvim'
 Plugin 'roxma/nvim-yarp'
+Plugin 'tpope/vim-surround'
+Plugin 'prettier/vim-prettier'
 Plugin 'roxma/vim-hug-neovim-rpc'
+Plugin 'itchyny/lightline.vim'
+
 
 call vundle#end()            " required
 
@@ -50,7 +53,7 @@ set cursorline
 " Enhance command-line completion
 set wildmenu
 " Allow cursor keys in insert mode
-set esckeys
+" set esckeys
 " Allow backspace in insert mode
 set backspace=indent,eol,start
 " Optimize for fast terminal connections
@@ -152,7 +155,11 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" Map fzf GFiles
 map ; :GFiles<CR>
+
+" Map NerdTree
+map <C-o> :NERDTreeToggle<CR>
 
 " Automatic commands
 if has("autocmd")
