@@ -4,7 +4,8 @@
 set t_Co=256
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
-colorscheme OceanicNext
+colorscheme PaperColor
+set background=dark
 
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
@@ -33,6 +34,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'prettier/vim-prettier'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'itchyny/lightline.vim'
+Plugin 'NLKNguyen/papercolor-theme'
 
 
 call vundle#end()            " required
