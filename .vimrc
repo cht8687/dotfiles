@@ -145,6 +145,13 @@ let g:polyglot_disabled = ['graphql']
 "deoplete auto-complete
 let g:deoplete#enable_at_startup = 1
 
+"lightline show full path
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
+      \ }
+
 "lyglot_disabled = ['css']
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -166,6 +173,12 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
+
+" Map nvim
+noremap <Leader>cc "+c<CR>
+noremap <Leader>cp "+p<CR>
+noremap <Leader>cy "+y<CR>
+noremap <Leader>cya gg"*yG<CR>
 
 noremap <S-l> gt
 noremap <S-h> gT
