@@ -13,7 +13,6 @@ set rtp+=~/.fzf
 call vundle#begin()
 
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'pangloss/vim-javascript'
@@ -79,9 +78,6 @@ endif
 
 " Don’t create backups when editing files in certain directories
 set backupskip=/tmp/*,/private/tmp/*
-" server-searcher
-let g:ackprg = 'ag --nogroup --nocolor --column'
-" let g:ackprg = 'ag --vimgrep'
 
 " Respect modeline in files
 set modeline
@@ -149,6 +145,13 @@ let g:polyglot_disabled = ['graphql']
 "deoplete auto-complete
 let g:deoplete#enable_at_startup = 1
 
+"lightline show full path
+let g:lightline = {
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
+      \ }
+      \ }
+
 "lyglot_disabled = ['css']
 function! StripWhitespace()
 	let save_cursor = getpos(".")
@@ -164,6 +167,13 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Map fzf GFiles
 map ; :GFiles<CR>
 
+"save file
+nnoremap <leader>s :w<cr>
+nnoremap <leader>S :wa<cr>
+
+"close current window
+nnoremap <c-w> :q<cr>
+
 " Map NerdTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
@@ -171,12 +181,34 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
 
+" Map nvim
+noremap <Leader>cc "+c<CR>
+noremap <Leader>cp "+p<CR>
+noremap <Leader>cy "+y<CR>
+noremap <Leader>cya gg"*yG<CR>
+
 noremap <S-l> gt
 noremap <S-h> gT
 
 " easy macros
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Switching tabs
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*
+nnoremap <leader>1 1gt
+nnoremap <leader>2 2gt
+nnoremap <leader>3 3gt
+nnoremap <leader>4 4gt
+nnoremap <leader>5 5gt
+nnoremap <leader>6 6gt
+nnoremap <leader>7 7gt
+nnoremap <leader>8 8gt
+nnoremap <leader>9 9gt
+
+" auto refresh a file when it is changed
+au FocusGained,BufEnter * :silent! !
 
 " Automatic commands
 if has("autocmd")
