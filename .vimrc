@@ -171,9 +171,6 @@ map ; :GFiles<CR>
 nnoremap <leader>s :w<cr>
 nnoremap <leader>S :wa<cr>
 
-"close current window
-nnoremap <c-w> :q<cr>
-
 " Map NerdTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
