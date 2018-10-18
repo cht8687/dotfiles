@@ -164,9 +164,6 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
-" Map fzf GFiles
-map ; :GFiles<CR>
-
 "save file
 nnoremap <leader>s :w<cr>
 nnoremap <leader>S :wa<cr>
@@ -177,6 +174,7 @@ nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
+noremap <Leader>fs :Ag<CR>
 
 " Map nvim
 noremap <Leader>cc "+c<CR>
@@ -186,6 +184,11 @@ noremap <Leader>cya gg"*yG<CR>
 
 noremap <S-l> gt
 noremap <S-h> gT
+
+noremap <Leader>nh :noh<CR>
+
+nnoremap <leader>c :nohlsearch<CR>
+
 
 " easy macros
 nnoremap Q @q
@@ -203,6 +206,12 @@ nnoremap <leader>6 6gt
 nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
+
+" Map NERDTree Ctrl+W 
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
 
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
