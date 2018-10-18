@@ -164,10 +164,6 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
-"save file
-nnoremap <leader>s :w<cr>
-nnoremap <leader>S :wa<cr>
-
 " Map NerdTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
@@ -189,6 +185,7 @@ noremap <Leader>nh :noh<CR>
 
 nnoremap <leader>c :nohlsearch<CR>
 
+nnoremap ; :
 
 " easy macros
 nnoremap Q @q
@@ -212,6 +209,10 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+
+" Prettier configs
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
 
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
