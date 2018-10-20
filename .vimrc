@@ -34,7 +34,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'itchyny/lightline.vim'
 Plugin 'NLKNguyen/papercolor-theme'
-
+Plugin 'easymotion/vim-easymotion'
 
 call vundle#end()            " required
 
@@ -167,7 +167,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Map NerdTree
-nnoremap <Leader>f :NERDTreeToggle<Enter>
+nnoremap <Leader>b :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
@@ -219,6 +219,25 @@ omap <leader><tab> <plug>(fzf-maps-o)
 
 xnoremap p "_dP
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"easy-motion
+"Mappings for simultaneously pressed keys
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:EasyMotion_do_mapping = 0 " Disable default mappings
+
+nmap <space> <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+" <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
 
@@ -231,3 +250,5 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
+
+
