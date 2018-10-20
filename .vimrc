@@ -35,6 +35,7 @@ Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'itchyny/lightline.vim'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'scrooloose/nerdcommenter'
 
 call vundle#end()            " required
 
@@ -235,8 +236,12 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " <Leader>f{char} to move to {char}
-map  <Leader>f <Plug>(easymotion-bd-f)
-nmap <Leader>f <Plug>(easymotion-overwin-f)
+map  <leader>f <plug>(easymotion-bd-f)
+nmap <leader>f <plug>(easymotion-overwin-f)
+
+" Move to word
+map  <Leader>w <Plug>(easymotion-bd-w)
+nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
