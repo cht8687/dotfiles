@@ -31,7 +31,6 @@ Plugin 'rakr/vim-one'
 Plugin 'junegunn/seoul256.vim'
 Plugin 'roxma/nvim-yarp'
 Plugin 'tpope/vim-surround'
-Plugin 'prettier/vim-prettier'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'itchyny/lightline.vim'
 Plugin 'NLKNguyen/papercolor-theme'
@@ -218,9 +217,7 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-" Prettier configs
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
+xnoremap p "_dP
 
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
