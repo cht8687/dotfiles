@@ -89,7 +89,6 @@ set secure
 set number
 " Enable syntax highlighting
 syntax on
-set t_Co=256
 " Highlight current line
 set cursorline
 filetype plugin indent on
@@ -164,6 +163,10 @@ noremap <leader>ss :call StripWhitespace()<CR>
 " Save a file as root (,W)
 noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
+" remap j and k to scroll by visual lines
+nnoremap j gj
+nnoremap k gk
+
 " Map NerdTree
 nnoremap <Leader>f :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
@@ -203,12 +206,17 @@ nnoremap <leader>6 6gt
 nnoremap <leader>7 7gt
 nnoremap <leader>8 8gt
 nnoremap <leader>9 9gt
-
-" Map NERDTree Ctrl+W 
+nnoremap <leader>l gt
+nnoremap <leader>h gT
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+
+" Mapping selecting mappings
+nmap <leader><tab> <plug>(fzf-maps-n)
+xmap <leader><tab> <plug>(fzf-maps-x)
+omap <leader><tab> <plug>(fzf-maps-o)
 
 " Prettier configs
 let g:prettier#autoformat = 0
