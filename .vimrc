@@ -37,6 +37,7 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
+Plugin 'prettier/vim-prettier'
 
 call vundle#end()            " required
 
