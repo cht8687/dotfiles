@@ -89,6 +89,8 @@ set exrc
 set secure
 " Enable line numbers
 set number
+"auto complete
+set completeopt=longest,menu
 " Enable syntax highlighting
 syntax on
 " Highlight current line
@@ -168,14 +170,20 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " remap j and k to scroll by visual lines
 nnoremap j gj
 nnoremap k gk
+"split the window 
+nnoremap <leader>, :vsplit<cr> 
+nnoremap <leader>< :split<cr> 
+"save file
+nnoremap <leader>s :w<cr>
+nnoremap <leader>S :wa<cr>
 
 " Map NerdTree
 nnoremap <Leader>b :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
-noremap <Leader>g :GFiles<CR>
-noremap <Leader>fs :Ag<CR>
+noremap <Leader>gf :GFiles<CR>
+noremap <Leader>ag :Ag<CR>
 
 " Map nvim
 noremap <Leader>cc "+c<CR>
@@ -257,5 +265,3 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 endif
-
-
