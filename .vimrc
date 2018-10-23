@@ -184,12 +184,13 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
 noremap <Leader>ag :Ag<CR>
+noremap <Leader>f :Files<CR>
 
 " Map nvim
-noremap <Leader>cc "+c<CR>
-noremap <Leader>cp "+p<CR>
-noremap <Leader>cy "+y<CR>
-noremap <Leader>cya gg"*yG<CR>
+noremap <Leader>c "+c<CR>
+noremap <Leader>p "+p<CR>
+noremap <Leader>y "+y<CR>
+noremap <Leader>ya gg"*yG<CR>
 
 noremap <S-l> gt
 noremap <S-h> gT
@@ -246,8 +247,8 @@ map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 
 " <Leader>f{char} to move to {char}
-map  <leader>f <plug>(easymotion-bd-f)
-nmap <leader>f <plug>(easymotion-overwin-f)
+" map  <leader>f <plug>(easymotion-bd-f)
+" nmap <leader>f <plug>(easymotion-overwin-f)
 
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
