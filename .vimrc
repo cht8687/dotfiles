@@ -171,8 +171,8 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 nnoremap j gj
 nnoremap k gk
 "split the window 
-nnoremap <leader>, :vsplit<cr> 
-nnoremap <leader>< :split<cr> 
+nnoremap <leader>z :vsplit<cr> 
+nnoremap <leader>Z :split<cr> 
 "save file
 nnoremap <leader>s :w<cr>
 nnoremap <leader>S :wa<cr>
@@ -182,7 +182,7 @@ nnoremap <Leader>b :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
-noremap <Leader>gf :GFiles<CR>
+noremap <Leader>g :GFiles<CR>
 noremap <Leader>ag :Ag<CR>
 
 " Map nvim
