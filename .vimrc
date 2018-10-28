@@ -38,6 +38,7 @@ Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'prettier/vim-prettier'
+Plugin 'Shougo/deoplete.nvim'
 
 call vundle#end()            " required
 
@@ -50,7 +51,7 @@ let NERDTreeShowHidden=1
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
-
+set diffopt+=vertical
 set cursorcolumn 
 set cursorline
 
@@ -188,7 +189,7 @@ noremap <Leader>f :Files<CR>
 
 " Map nvim
 noremap <Leader>c "+c<CR>
-noremap <Leader>p "+p<CR>
+noremap <Leader>cp "+p<CR>
 noremap <Leader>y "+y<CR>
 noremap <Leader>ya gg"*yG<CR>
 
