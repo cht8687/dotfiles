@@ -187,6 +187,10 @@ noremap <Leader>g :GFiles<CR>
 noremap <Leader>ag :Ag<CR>
 noremap <Leader>f :Files<CR>
 
+" undo tree
+nnoremap <leader>ls :Ex<CR>
+inoremap <leader>ls <ESC>:Ex<CR>
+
 " Map nvim
 noremap <Leader>c "+c<CR>
 noremap <Leader>cp "+p<CR>
@@ -257,6 +261,12 @@ nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
+
+
+" Prettier configs {{{
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
+" }}}
 
 " Automatic commands
 if has("autocmd")
