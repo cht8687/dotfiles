@@ -39,6 +39,7 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'prettier/vim-prettier'
 Plugin 'Shougo/deoplete.nvim'
+Plugin 'tpope/vim-unimpaired'
 
 call vundle#end()            " required
 
