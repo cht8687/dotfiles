@@ -180,13 +180,14 @@ nnoremap <leader>s :w<cr>
 nnoremap <leader>S :wa<cr>
 
 " Map NerdTree
-nnoremap <Leader>b :NERDTreeToggle<Enter>
+nnoremap <Leader>t :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
 noremap <Leader>ag :Ag<CR>
 noremap <Leader>f :Files<CR>
+noremap <Leader>b :Buffers<CR>
 
 " undo tree
 nnoremap <leader>ls :Ex<CR>
