@@ -39,6 +39,8 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'prettier/vim-prettier'
 Plugin 'Shougo/deoplete.nvim'
+Plugin 'brooth/far.vim'
+Plugin 'tpope/vim-unimpaired'
 
 call vundle#end()            " required
 
@@ -179,13 +181,14 @@ nnoremap <leader>s :w<cr>
 nnoremap <leader>S :wa<cr>
 
 " Map NerdTree
-nnoremap <Leader>b :NERDTreeToggle<Enter>
+nnoremap <Leader>t :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
 noremap <Leader>ag :Ag<CR>
 noremap <Leader>f :Files<CR>
+noremap <Leader>b :Buffers<CR>
 
 " undo tree
 nnoremap <leader>ls :Ex<CR>
@@ -268,6 +271,7 @@ let g:prettier#autoformat = 0
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
 " }}}
 
+
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
@@ -276,4 +280,8 @@ if has("autocmd")
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
+
+
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
 endif
