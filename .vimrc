@@ -192,7 +192,6 @@ noremap <Leader>b :Buffers<CR>
 
 " undo tree
 nnoremap <leader>ls :Ex<CR>
-inoremap <leader>ls <ESC>:Ex<CR>
 
 " Map nvim
 noremap <Leader>c "+c<CR>
