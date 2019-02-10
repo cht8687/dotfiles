@@ -4,8 +4,9 @@
 set t_Co=256
 let g:oceanic_next_terminal_bold = 1
 let g:oceanic_next_terminal_italic = 1
-colorscheme PaperColor
 set background=dark
+
+colorscheme PaperColor 
 
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
@@ -34,7 +35,6 @@ Plugin 'tpope/vim-surround'
 Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'itchyny/lightline.vim'
 Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'prettier/vim-prettier'
@@ -237,6 +237,10 @@ xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
 xnoremap p "_dP
+
+" Switch buffer
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprevious<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "easy-motion
