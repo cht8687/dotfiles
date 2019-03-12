@@ -192,3 +192,6 @@ alias dsf='git diff --color | diff-so-fancy'
 # vim
 alias v='nvim'
 
+# tmuxinator
+alias tm='tmuxinator'
+
