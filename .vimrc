@@ -1,13 +1,3 @@
-" Use the Solarized Dark theme
-"colorscheme 
-
-set t_Co=256
-let g:oceanic_next_terminal_bold = 1
-let g:oceanic_next_terminal_italic = 1
-set background=dark
-
-colorscheme PaperColor 
-
 set rtp+=~/.vim/bundle/Vundle.vim
 set rtp+=~/.fzf
 
@@ -43,6 +33,12 @@ Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
 
 call vundle#end()            " required
+
+" seoul256 (dark):
+"   Range:   233 (darkest) ~ 239 (lightest)
+"   Default: 237
+let g:seoul256_background = 236
+colo seoul256
 
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
