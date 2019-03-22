@@ -37,7 +37,7 @@ call vundle#end()            " required
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
-let g:seoul256_background = 236
+let g:seoul256_background = 234
 colo seoul256
 
 filetype plugin indent on    " required
@@ -191,7 +191,7 @@ nnoremap <leader>ls :Ex<CR>
 
 " Map nvim
 noremap <Leader>c "+c<CR>
-noremap <Leader>cp "+p<CR>
+noremap <Leader>p "+p<CR>
 noremap <Leader>y "+y<CR>
 noremap <Leader>ya gg"*yG<CR>
 
