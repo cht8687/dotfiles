@@ -189,7 +189,7 @@ set hlsearch
 set incsearch
 set list
 set ignorecase
-nnoremap <leader>c :nohlsearch<CR>
+nnoremap <Leader><SPACE> :nohlsearch<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
