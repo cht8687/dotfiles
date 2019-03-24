@@ -208,7 +208,7 @@ nnoremap g# g#zz" }}}
 noremap <Leader>c "+c<CR>
 noremap <Leader>d "_d<CR>
 vnoremap <Leader>d "_d<CR>
-noremap <Leader>p "+p<CR>
+noremap <Leader>cp "+p<CR>
 noremap <Leader>y "+y<CR>
 noremap <Leader>ya gg"*yG<CR>
 " }}}
