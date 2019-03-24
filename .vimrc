@@ -193,8 +193,8 @@ nnoremap <Leader><SPACE> :nohlsearch<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
-noremap <Leader>ag :Ag<SPACE>
-noremap <Leader>f :Files<CR>
+noremap <Leader>F :Files<CR>
+noremap <Leader>f :Ag<SPACE>
 noremap <Leader>b :Buffers<CR>
 nnoremap n nzz
 nnoremap N Nzz

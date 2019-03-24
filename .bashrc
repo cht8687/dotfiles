@@ -18,3 +18,7 @@ eval $(thefuck --alias)
 
 source ~/bin/tmuxinator.bash
 
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/robert/Documents/cht/javascript/packages/dynamoDB-elasticsearch-bridge/node_modules/tabtab/.completions/slss.bash ] && . /Users/robert/Documents/cht/javascript/packages/dynamoDB-elasticsearch-bridge/node_modules/tabtab/.completions/slss.bash
