@@ -194,7 +194,7 @@ noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
 noremap <Leader>F :Files<CR>
-noremap <Leader>f :Ag<SPACE>
+noremap <Leader>f :Rag<SPACE>
 noremap <Leader>b :Buffers<CR>
 nnoremap n nzz
 nnoremap N Nzz
@@ -284,7 +284,8 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
-
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" fzf configs enable Rag {{{
+command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" }}}
 
 endif
