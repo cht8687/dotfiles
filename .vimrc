@@ -31,6 +31,7 @@ Plugin 'prettier/vim-prettier'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 
@@ -196,6 +197,8 @@ noremap <Leader>g :GFiles<CR>
 noremap <Leader>F :Files<CR>
 noremap <Leader>f :Rag<SPACE>
 noremap <Leader>b :Buffers<CR>
+noremap <C-i> * 
+noremap <C-I> #
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
