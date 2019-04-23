@@ -6,5 +6,8 @@ cp ~/.bashrc .
 cp ~/.aliases .
 cp ~/.zshrc .
 cp ~/.tmux.conf .
+rm -rf Brewfile
+brew bundle dump
+
 sudo cp -r ~/.vim .
 

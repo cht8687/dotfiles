@@ -31,13 +31,14 @@ Plugin 'prettier/vim-prettier'
 Plugin 'Shougo/deoplete.nvim'
 Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
+Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
-let g:seoul256_background = 236
+let g:seoul256_background = 234
 colo seoul256
 
 filetype plugin indent on    " required
@@ -179,38 +180,66 @@ nnoremap <leader>S :wa<cr>
 " Map NerdTree
 nnoremap <Leader>t :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>v :NERDTreeFind<CR>
+
+" Search {{{
+let g:ag_working_path_mode="r"
+set showmatch
+set scrolloff=5
+set smartcase
+set hlsearch
+set incsearch
+set list
+set ignorecase
+nnoremap <Leader><SPACE> :nohlsearch<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
-noremap <Leader>ag :Ag<SPACE>
-noremap <Leader>f :Files<CR>
+noremap <Leader>F :Files<CR>
+noremap <Leader>f :Rag<SPACE>
 noremap <Leader>b :Buffers<CR>
-
-" undo tree
-nnoremap <leader>ls :Ex<CR>
-
-" Map nvim
+noremap <C-i> * 
+noremap <C-I> #
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap * *zz
+nnoremap # #zz
+nnoremap g* g*zz
+nnoremap g# g#zz" }}}
+" }}}
+"
+" Copy & Paste {{{
 noremap <Leader>c "+c<CR>
+noremap <Leader>d "_d
+vnoremap <Leader>d "_d
 noremap <Leader>cp "+p<CR>
 noremap <Leader>y "+y<CR>
 noremap <Leader>ya gg"*yG<CR>
+" }}}
+
+" Motions {{{
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+nnoremap j gj
+nnoremap k gk
+nnoremap B ^
+nnoremap E $
+nnoremap $ <nop>
+nnoremap ^ <nop>
+" }}}
 
 noremap <S-l> gt
 noremap <S-h> gT
-
+nnoremap <leader>ls :Ex<CR>
 noremap <Leader>nh :noh<CR>
-
-nnoremap <leader>c :nohlsearch<CR>
-
 nnoremap ; :
 
 " easy macros
 nnoremap Q @q
 vnoremap Q :norm @q<cr>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Switching tabs
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""*
+" Switching tabs {{{
 nnoremap <leader>1 1gt
 nnoremap <leader>2 2gt
 nnoremap <leader>3 3gt
@@ -226,6 +255,7 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+" }}}
 
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
@@ -237,29 +267,6 @@ xnoremap p "_dP
 " Switch buffer
 nnoremap <C-n> :bnext<CR>
 nnoremap <C-p> :bprevious<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"easy-motion
-"Mappings for simultaneously pressed keys
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-nmap <space> <Plug>(easymotion-overwin-f2)
-
-" Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-
-" JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
-
-" <Leader>f{char} to move to {char}
-" map  <leader>f <plug>(easymotion-bd-f)
-" nmap <leader>f <plug>(easymotion-overwin-f)
-
-" Move to word
-map  <Leader>w <Plug>(easymotion-bd-w)
-nmap <Leader>w <Plug>(easymotion-overwin-w)
 
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
@@ -280,7 +287,8 @@ if has("autocmd")
 	" Treat .md files as Markdown
 	autocmd BufNewFile,BufRead *.md setlocal filetype=markdown
 
-
-let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+" fzf configs enable Rag {{{
+command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" }}}
 
 endif
