@@ -17,4 +17,14 @@ sudo apt-get install silversearcher-ag
 
 sudo apt-get install tmux
 
+sudo apt install tmuxinator 
+
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
+sudo apt-get install neovim
+
+# fix warnings
+vim -c 'UpdateRemotePlugins' -c 'qa!'
+
 
