@@ -21,4 +21,16 @@ source ~/bin/tmuxinator.bash
 
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
-[ -f /Users/robert/Documents/cht/javascript/packages/dynamoDB-elasticsearch-bridge/node_modules/tabtab/.completions/slss.bash ] && . /Users/robert/Documents/cht/javascript/packages/dynamoDB-elasticsearch-bridge/node_modules/tabtab/.completions/slss.bash
+[ -f /Users/robert/Documents/cht/javascript/packages/dynamoDB-elasticsearch-bridge/node_modules/tabtab/.completions/slss.bash ] && . /Users/robert/Documents/cht/javascript/packages/dynamoDB-elasticsearch-bridge/node_modules/tabtab/.completions/slss.bashalias ctags='/usr/local/bin/ctags'
+
+# automatic nvm use
+enter_directory() {
+  if [[ $PWD == $PREV_PWD ]]; then
+    return
+  fi
+
+  PREV_PWD=$PWD
+  [[ -f ".nvmrc" ]] && nvm use
+}
+
+export PROMPT_COMMAND=enter_directory

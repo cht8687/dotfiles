@@ -225,8 +225,6 @@ nnoremap j gj
 nnoremap k gk
 nnoremap B ^
 nnoremap E $
-nnoremap $ <nop>
-nnoremap ^ <nop>
 " }}}
 
 noremap <S-l> gt
@@ -289,6 +287,11 @@ if has("autocmd")
 
 " fzf configs enable Rag {{{
 command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+" }}}
+
+
+"c-Tag {{{
+set tags=tags
 " }}}
 
 endif
