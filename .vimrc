@@ -19,7 +19,7 @@ Plugin 'othree/html5.vim'
 Plugin 'styled-components/vim-styled-components'
 Plugin 'sheerun/vim-polyglot'
 Plugin 'rakr/vim-one'
-Plugin 'junegunn/seoul256.vim'
+Plugin 'morhetz/gruvbox'
 Plugin 'roxma/nvim-yarp'
 Plugin 'tpope/vim-surround'
 Plugin 'roxma/vim-hug-neovim-rpc'
@@ -35,11 +35,17 @@ Plugin 'airblade/vim-gitgutter'
 
 call vundle#end()            " required
 
-" seoul256 (dark):
-"   Range:   233 (darkest) ~ 239 (lightest)
-"   Default: 237
-let g:seoul256_background = 234
-colo seoul256
+" seoul256 (light):
+"   Range:   252 (darkest) ~ 256 (lightest)
+"   Default: 253
+" colo seoul256
+" let g:seoul256_background = 252
+" let g:seoul256_light_background = 252
+
+colorscheme gruvbox
+set background=light
+let g:gruvbox_contrast_light='soft'
+let g:gruvbox_hls_cursor='purple'
 
 filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
