@@ -195,3 +195,6 @@ alias v='nvim'
 # tmuxinator
 alias tm='tmuxinator'
 
+# tmux
+
+alias rltmux=tmux source-file ~/.tmux.conf

@@ -32,6 +32,7 @@ Plugin 'Shougo/deoplete.nvim'
 Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'christoomey/vim-tmux-navigator'
 
 call vundle#end()            " required
 
