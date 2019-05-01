@@ -197,4 +197,4 @@ alias tm='tmuxinator'
 
 # tmux
 
-alias rltmux=tmux source-file ~/.tmux.conf
+alias rltmux='tmux source-file ~/.tmux.conf'
