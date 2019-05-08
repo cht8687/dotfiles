@@ -171,7 +171,11 @@ alias gchangeurl='git remote set-url'
 alias gd='git diff'
 alias gp='git push'
 alias gpf='git push -f'
-alias gco='git checkout -p'
+alias gco='git checkout'
+alias gcop='git checkout -p'
+alias gst='git status'
+alias gl='git log -1 --pretty=%B | pbcopy;'
+
 # Git
 git config --global color.ui true
 git config --global format.pretty oneline
