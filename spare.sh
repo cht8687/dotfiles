@@ -6,6 +6,7 @@ cp ~/.bashrc .
 cp ~/.aliases .
 cp ~/.zshrc .
 cp ~/.tmux.conf .
+cp -r ~/.tmuxinator/ ./.tmuxinator/
 rm -rf Brewfile
 brew bundle dump
 
