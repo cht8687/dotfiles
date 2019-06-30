@@ -13,6 +13,7 @@ vim -c 'PluginInstall' -c 'qa!'
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
+
 sudo apt-get install silversearcher-ag
 
 sudo apt-get install tmux
