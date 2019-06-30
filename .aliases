@@ -175,6 +175,7 @@ alias gco='git checkout'
 alias gcop='git checkout -p'
 alias gst='git status'
 alias gl='git log -1 --pretty=%B | pbcopy;'
+alias gdummy='git ci -m"1"'
 
 # Git
 git config --global color.ui true

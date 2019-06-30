@@ -29,3 +29,7 @@ enter_directory() {
 }
 
 export PROMPT_COMMAND=enter_directory
+
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[ -f /Users/robert/Documents/cht/javascript/packages/auth-challenge/node_modules/tabtab/.completions/slss.bash ] && . /Users/robert/Documents/cht/javascript/packages/auth-challenge/node_modules/tabtab/.completions/slss.bash
