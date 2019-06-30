@@ -44,7 +44,7 @@ call vundle#end()            " required
 " let g:seoul256_light_background = 252
 
 colorscheme gruvbox
-set background=light
+set background=dark
 let g:gruvbox_contrast_light='soft'
 let g:gruvbox_hls_cursor='purple'
 
