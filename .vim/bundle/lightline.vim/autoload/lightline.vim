@@ -2,7 +2,7 @@
 " Filename: autoload/lightline.vim
 " Author: itchyny
 " License: MIT License
-" Last Change: 2018/11/24 12:00:00.
+" Last Change: 2019/07/30 12:00:00.
 " =============================================================================
 
 let s:save_cpo = &cpo
@@ -11,6 +11,7 @@ set cpo&vim
 let s:_ = 1 " 1: uninitialized, 2: disabled
 
 function! lightline#update() abort
+  if &buftype ==# 'popup' | return | endif
   if s:_
     if s:_ == 2 | return | endif
     call lightline#init()
@@ -45,7 +46,10 @@ function! lightline#enable() abort
   call lightline#update()
   augroup lightline
     autocmd!
-    autocmd WinEnter,BufWinEnter,FileType,SessionLoadPost * call lightline#update()
+    autocmd WinEnter,BufEnter,SessionLoadPost * call lightline#update()
+    if !has('patch-8.1.1715')
+      autocmd FileType qf call lightline#update()
+    endif
     autocmd SessionLoadPost * call lightline#highlight()
     autocmd ColorScheme * if !has('vim_starting') || expand('<amatch>') !=# 'macvim'
           \ | call lightline#update() | call lightline#highlight() | endif

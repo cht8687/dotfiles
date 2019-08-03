@@ -33,6 +33,8 @@ Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 't9md/vim-choosewin' 
+" Plugin 'zxqfl/tabnine-vim'
 
 call vundle#end()            " required
 
@@ -260,6 +262,20 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-h> <C-W>h
 nnoremap <C-l> <C-W>l
+" }}}
+
+" vim-choosewin {{{
+nmap  -  <Plug>(choosewin)
+let g:choosewin_overlay_enable = 1
+" tmux-like overlay color
+	let g:choosewin_color_overlay = {
+	      \ 'gui': ['DodgerBlue3', 'DodgerBlue3'],
+	      \ 'cterm': [105, 105]
+	      \ }
+	let g:choosewin_color_overlay_current = {
+	      \ 'gui': ['firebrick1', 'firebrick1'],
+	      \ 'cterm': [124, 124]
+	      \ }
 " }}}
 
 " Mapping selecting mappings
