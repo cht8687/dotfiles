@@ -34,6 +34,7 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 't9md/vim-choosewin' 
+Plugin 'JamshedVesuna/vim-markdown-preview'
 " Plugin 'zxqfl/tabnine-vim'
 
 call vundle#end()            " required
@@ -315,6 +316,12 @@ command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'option
 
 "c-Tag {{{
 set tags=tags
+" }}}
+
+"markdown {{{
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_github=1
+let vim_markdown_preview_browser='Google Chrome'
 " }}}
 
 endif

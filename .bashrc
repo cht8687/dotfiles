@@ -16,7 +16,8 @@ export NVM_DIR="$HOME/.nvm"
 
 eval $(thefuck --alias)
 
-source ~/bin/tmuxinator.bash
+source ~/.bin/tmuxinator.bash
+source ~/.ghcup/env
 
 # automatic nvm use
 enter_directory() {
