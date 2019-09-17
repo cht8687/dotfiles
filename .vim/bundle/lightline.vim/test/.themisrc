@@ -18,5 +18,3 @@ endfunction
 function! SID(name) abort
   return function(printf("\<SNR>%d_%s", s:sid('autoload/lightline.vim'), a:name))
 endfunction
-
-filetype plugin on

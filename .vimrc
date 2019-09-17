@@ -35,6 +35,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 't9md/vim-choosewin' 
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 " Plugin 'zxqfl/tabnine-vim'
 
 call vundle#end()            " required

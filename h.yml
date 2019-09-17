@@ -1,5 +1,5 @@
-name: q
-root: ~/
+name: h
+root: ~/Documents/cht/javascript/
 
 # Optional. tmux socket
 # socket_name: foo
@@ -37,7 +37,7 @@ root: ~/
 # startup_window: logs
 
 windows:
-  - editor:
+  - frontend:
       layout: main-vertical
       panes:
         - v

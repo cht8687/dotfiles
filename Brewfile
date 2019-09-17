@@ -12,9 +12,12 @@ brew "gettext"
 brew "git-extras"
 brew "gnupg"
 brew "grip"
+brew "haskell-stack", link: false
 brew "maven"
 brew "neovim"
-brew "node"
+brew "node", link: false
+brew "ruby-build"
+brew "rbenv"
 brew "ruby"
 brew "the_silver_searcher"
 brew "thefuck"
