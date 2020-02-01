@@ -28,12 +28,14 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'w0rp/ale'
 Plugin 'prettier/vim-prettier'
-Plugin 'Shougo/deoplete.nvim'
 Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 't9md/vim-choosewin' 
+Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neoclide/coc.nvim'
 
@@ -100,7 +102,7 @@ set secure
 " Enable line numbers
 set number
 "auto complete
-set completeopt=longest,menu
+" set completeopt=longest,menu
 " Enable syntax highlighting
 syntax on
 " Highlight current line
@@ -155,9 +157,6 @@ let g:javascript_plugin_jsdoc = 1
 " Strip trailing whitespace (,ss)
 let g:polyglot_disabled = ['graphql']
 
-"deoplete auto-complete
-let g:deoplete#enable_at_startup = 1
-
 "lightline show full path
 let g:lightline = {
       \ 'active': {
@@ -207,8 +206,6 @@ noremap <Leader>g :GFiles<CR>
 noremap <Leader>F :Files<CR>
 noremap <Leader>f :Rag<SPACE>
 noremap <Leader>b :Buffers<CR>
-noremap <C-i> * 
-noremap <C-I> #
 nnoremap n nzz
 nnoremap N Nzz
 nnoremap * *zz
@@ -365,7 +362,7 @@ set signcolumn=yes
 
 " Use tab for trigger completion with characters ahead and navigate.
 " Use command ':verbose imap <tab>' to make sure tab is not mapped by other plugin.
-inoremap <silent><expr> <TAB>
+ inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
       \ <SID>check_back_space() ? "\<TAB>" :
       \ coc#refresh()
