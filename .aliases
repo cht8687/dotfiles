@@ -176,12 +176,14 @@ alias gcop='git checkout -p'
 alias gst='git status'
 alias gl='git log -1 --pretty=format:'%s' --abbrev-commit | pbcopy'
 alias g1='git ci -m"1"'
+alias gup='git ci -m"update"'
 alias gb1='git reset --soft HEAD~1'
 alias gb2='git reset --soft HEAD~2'
 alias gb3='git reset --soft HEAD~3'
 alias gb4='git reset --soft HEAD~4'
 alias gb5='git reset --soft HEAD~5'
 alias brewski='brew update && brew upgrade && brew cleanup; brew doctor'
+alias lport='lsof -i'
 
 
 # Git
