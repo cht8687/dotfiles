@@ -213,5 +213,7 @@ alias h='ghci'
 alias tm='tmuxinator'
 
 # tmux
-
+alias ta='tmux attach -t'
+alias td='tmux detach'
+alias tl='tmux ls'
 alias rltmux='tmux source-file ~/.tmux.conf'

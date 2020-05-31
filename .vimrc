@@ -26,7 +26,7 @@ Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'itchyny/lightline.vim'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'w0rp/ale'
+Plugin 'dense-analysis/ale'
 Plugin 'prettier/vim-prettier'
 Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
@@ -291,11 +291,15 @@ nnoremap <C-p> :bprevious<CR>
 au FocusGained,BufEnter * :silent! !
 
 
-" Prettier configs {{{
-let g:prettier#autoformat = 0
-autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md PrettierAsync
+" vim-prettier configs {{{
+" flow|babylon|typescript|css|less|scss|json|graphql|markdown or empty string
+" (let prettier choose).
+" default: ''
+let g:prettier#config#parser = ''
+" when running at every change you may want to disable quickfix
+let g:prettier#quickfix_enabled = 1 
+autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
 " }}}
-
 
 " Automatic commands
 if has("autocmd")
@@ -337,6 +341,16 @@ let g:syntastic_check_on_wq = 0
 "pane {{{
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
+" }}}
+
+"ale {{{
+let g:ale_fixers = {
+\   'javascript': ['prettier'],
+\   'css': ['prettier'],
+\}
+
+let g:ale_fix_on_save = 1
+let g:ale_linters_explicit = 1
 " }}}
 
 
@@ -471,6 +485,5 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
 "}}}
-
 
 endif
