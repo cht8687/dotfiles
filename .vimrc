@@ -26,8 +26,6 @@ Plugin 'roxma/vim-hug-neovim-rpc'
 Plugin 'itchyny/lightline.vim'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'dense-analysis/ale'
-Plugin 'prettier/vim-prettier'
 Plugin 'brooth/far.vim'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'airblade/vim-gitgutter'
@@ -38,6 +36,7 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neoclide/coc.nvim'
+Plugin 'ThePrimeagen/vim-be-good'
 
 call vundle#end()            " required
 
@@ -290,17 +289,6 @@ nnoremap <C-p> :bprevious<CR>
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
 
-
-" vim-prettier configs {{{
-" flow|babylon|typescript|css|less|scss|json|graphql|markdown or empty string
-" (let prettier choose).
-" default: ''
-let g:prettier#config#parser = ''
-" when running at every change you may want to disable quickfix
-let g:prettier#quickfix_enabled = 1 
-autocmd TextChanged,InsertLeave *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue,*.yaml,*.html PrettierAsync
-" }}}
-
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
@@ -342,17 +330,6 @@ let g:syntastic_check_on_wq = 0
 nnoremap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " }}}
-
-"ale {{{
-let g:ale_fixers = {
-\   'javascript': ['prettier'],
-\   'css': ['prettier'],
-\}
-
-let g:ale_fix_on_save = 1
-let g:ale_linters_explicit = 1
-" }}}
-
 
 "coc {{{
 " if hidden is not set, TextEdit might fail.
@@ -487,3 +464,10 @@ nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 "}}}
 
 endif
+
+"mark {{{
+"nnoremap ` :Marks<CR>
+"}}}
+
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '>-2<CR>gv=gv

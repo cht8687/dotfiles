@@ -1,5 +1,6 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH="$HOME/bin:$PATH";
+export DENO_INSTALL="/Users/robert/.deno"
 
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/robert/.oh-my-zsh
@@ -105,3 +106,9 @@ export FZF_DEFAULT_COMMAND='ag -g ""'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
+alias shopt='/usr/bin/shopt'
+
+
+
+
+eval $(thefuck --alias)
