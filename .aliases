@@ -155,7 +155,7 @@ git config --global user.name "Robert Chang"
 
 
 # alias commands
-alias cdw='cd ~/Documents/work';
+alias cdw='cd ~/Documents/work/wow';
 alias cdp='cd ~/Documents/cht'
 alias cnginx='code /usr/local/etc/nginx/nginx.conf'
 alias cdn='cd /usr/local/etc/nginx; code nginx.conf;'

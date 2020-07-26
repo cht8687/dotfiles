@@ -36,16 +36,12 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'peitalin/vim-jsx-typescript'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'neoclide/coc.nvim'
-Plugin 'ThePrimeagen/vim-be-good'
-
+Plugin 'frazrepo/vim-rainbow'
+Plugin 'rbgrouleff/bclose.vim'
+Plugin 'leafOfTree/vim-svelte-plugin'
+Plugin 'voldikss/vim-floaterm'
+Plugin 'benmills/vimux'
 call vundle#end()            " required
-
-" seoul256 (light):
-"   Range:   252 (darkest) ~ 256 (lightest)
-"   Default: 253
-" colo seoul256
-" let g:seoul256_background = 252
-" let g:seoul256_light_background = 252
 
 colorscheme gruvbox
 set background=dark
@@ -202,7 +198,7 @@ nnoremap <Leader><SPACE> :nohlsearch<CR>
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gd :Gdiff<CR>
 noremap <Leader>g :GFiles<CR>
-noremap <Leader>F :Files<CR>
+"noremap <Leader>F :Files<CR>
 noremap <Leader>f :Rag<SPACE>
 noremap <Leader>b :Buffers<CR>
 nnoremap n nzz
@@ -211,12 +207,16 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz" }}}
+map <leader>tt :FloatermNew<CR>
+map <C-p> :FloatermNew fzf<CR>
+map <leader>rr :FloatermNew ranger<CR>
 " }}}
 "
 " Copy & Paste {{{
 noremap <Leader>c "+c<CR>
 noremap <Leader>d "_d
 vnoremap <Leader>d "_d
+xnoremap p "_dP
 noremap <Leader>cp "+p<CR>
 noremap <Leader>y "+y<CR>
 noremap <Leader>ya gg"*yG<CR>
@@ -280,11 +280,10 @@ nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)
 omap <leader><tab> <plug>(fzf-maps-o)
 
-xnoremap p "_dP
 
 " Switch buffer
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bprevious<CR>
+nnoremap gn :bnext<CR>
+nnoremap gp :bprevious<CR>
 
 " auto refresh a file when it is changed
 au FocusGained,BufEnter * :silent! !
@@ -332,6 +331,17 @@ nnoremap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 " }}}
 
 "coc {{{
+"
+" coc config
+let g:coc_global_extensions = [
+  \ 'coc-snippets',
+  \ 'coc-pairs',
+  \ 'coc-tsserver',
+  \ 'coc-eslint', 
+  \ 'coc-prettier', 
+  \ 'coc-json', 
+  \ ]
+"
 " if hidden is not set, TextEdit might fail.
 set hidden
 
@@ -461,6 +471,7 @@ nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
 
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
 "}}}
 
 endif
@@ -471,3 +482,12 @@ endif
 
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '>-2<CR>gv=gv
+
+let g:rainbow_active = 1
+
+"custom bindings {{{
+"test helpers {{{
+map <leader>testo :s/describe(/describe\.only(/<CR>:noh<CR>:w<CR>:VimuxPromptCommand<CR>npm run test<CR>
+map <leader>test :noh<CR>:w<CR>:VimuxPromptCommand<CR>npm run test<CR>
+"}}}
+"}}}
