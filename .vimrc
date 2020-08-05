@@ -207,9 +207,9 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz" }}}
-map <leader>tt :FloatermNew<CR>
-map <C-p> :FloatermNew fzf<CR>
-map <leader>rr :FloatermNew ranger<CR>
+nnoremap <leader>tt :FloatermNew<CR>
+nnoremap <C-p> :FloatermNew fzf<CR>
+nnoremap <leader>rr :FloatermNew ranger<CR>
 " }}}
 "
 " Copy & Paste {{{
@@ -489,5 +489,7 @@ let g:rainbow_active = 1
 "test helpers {{{
 map <leader>testo :s/describe(/describe\.only(/<CR>:noh<CR>:w<CR>:VimuxPromptCommand<CR>npm run test<CR>
 map <leader>test :noh<CR>:w<CR>:VimuxPromptCommand<CR>npm run test<CR>
+map <leader>dev :noh<CR>:w<CR>:VimuxPromptCommand<CR>npm run dev<CR>
+map <leader>start :noh<CR>:w<CR>:VimuxPromptCommand<CR>npm run start<CR>
 "}}}
 "}}}
