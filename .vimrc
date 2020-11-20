@@ -209,6 +209,7 @@ nnoremap g* g*zz
 nnoremap g# g#zz" }}}
 nnoremap <leader>tt :FloatermNew<CR>
 nnoremap <C-p> :FloatermNew fzf<CR>
+"noremap <Leader>f :FloatermNew Ag<CR>
 nnoremap <leader>rr :FloatermNew ranger<CR>
 " }}}
 "
